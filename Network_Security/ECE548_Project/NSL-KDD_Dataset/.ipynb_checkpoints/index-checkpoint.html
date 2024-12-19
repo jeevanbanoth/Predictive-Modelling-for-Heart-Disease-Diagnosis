@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHM WSN Monitoring Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-4">SHM WSN Monitoring Dashboard</h1>
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div id="status" class="text-2xl font-bold mb-4"></div>
+            <div id="chart" style="width:100%;height:400px;"></div>
+        </div>
+    </div>
+
+    <script>
+        class SHM_WSN_Monitor {
+            constructor() {
+                this.latest_data = null;
+                this.latest_prediction = null;
+            }
+
+            generateSensorData() {
+                return Array.from({length: 20}, () => Math.random());
+            }
+
+            processData(data) {
+                // Simple threshold-based detection
+                const sum = data.reduce((a, b) => a + b, 0);
+                return sum > 10 ? 1 : 0;
+            }
+
+            simulateRealTimeProcessing() {
+                this.latest_data = this.generateSensorData();
+                this.latest_prediction = this.processData(this.latest_data);
+            }
+        }
+
+        const monitor = new SHM_WSN_Monitor();
+
+        function updateDashboard() {
+            monitor.simulateRealTimeProcessing();
+            const data = {
+                prediction: monitor.latest_prediction,
+                data: monitor.latest_data
+            };
+
+            const status = document.getElementById('status');
+            status.textContent = data.prediction === 1 ? "Alert: Potential Attack Detected!" : "Normal Activity";
+            status.className = data.prediction === 1 ? "text-2xl font-bold mb-4 text-red-600" : "text-2xl font-bold mb-4 text-green-600";
+
+            Plotly.newPlot('chart', [{
+                y: data.data,
+                type: 'line'
+            }], {
+                title: 'Sensor Data',
+                xaxis: { title: 'Feature' },
+                yaxis: { title: 'Value' }
+            });
+        }
+
+        setInterval(updateDashboard, 1000);
+    </script>
+</body>
+</html>

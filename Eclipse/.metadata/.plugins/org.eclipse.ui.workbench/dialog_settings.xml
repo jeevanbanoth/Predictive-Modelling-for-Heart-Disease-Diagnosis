@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.FileSystem"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="FileSystemImportWizard">
+		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
+		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/Users/jeevankumarbanoth/Downloads/proj3/sources"/>
+			<item value="/Users/jeevankumarbanoth/Desktop/Eclipse/project3/src/inventory"/>
+			<item value="/Users/jeevankumarbanoth/Desktop/Eclipse/project3/src"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/proj3/sources/sortedList"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/Lab10"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/Lab9"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/Lab8"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/proj3/sources/inventory"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/proj3/sources/list"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/Lab7"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/proj2/sources"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/Lab6"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/Lab5 2"/>
+			<item value="/Users/jeevankumarbanoth/Downloads/Lab5"/>
+		</list>
+	</section>
+</section>
